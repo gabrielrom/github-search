@@ -13,7 +13,12 @@
 		812DAFBC276A30C600A1F1A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 812DAFBA276A30C600A1F1A7 /* LaunchScreen.storyboard */; };
 		812DAFE2276A537000A1F1A7 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812DAFE1276A537000A1F1A7 /* FeedViewController.swift */; };
 		812DAFE7276A5C3F00A1F1A7 /* InitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812DAFE6276A5C3F00A1F1A7 /* InitialView.swift */; };
-		812DAFEA276A5F0C00A1F1A7 /* placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812DAFE9276A5F0C00A1F1A7 /* placeholder.swift */; };
+		812DAFEC276A61B900A1F1A7 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812DAFEB276A61B900A1F1A7 /* HeaderView.swift */; };
+		812DAFF1276A681300A1F1A7 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 812DAFF0276A67C300A1F1A7 /* Roboto-Light.ttf */; };
+		812DAFF2276A681800A1F1A7 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 812DAFEF276A679C00A1F1A7 /* Roboto-Regular.ttf */; };
+		812DAFF3276A681C00A1F1A7 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 812DAFEE276A678400A1F1A7 /* Roboto-Bold.ttf */; };
+		812DAFF6276A72A700A1F1A7 /* HeaderViewConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812DAFF5276A72A700A1F1A7 /* HeaderViewConstraints.swift */; };
+		812DAFF9276A741300A1F1A7 /* FeedConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812DAFF8276A741300A1F1A7 /* FeedConstraints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +36,12 @@
 		812DAFDF276A32FE00A1F1A7 /* placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = placeholder.swift; sourceTree = "<group>"; };
 		812DAFE1276A537000A1F1A7 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		812DAFE6276A5C3F00A1F1A7 /* InitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialView.swift; sourceTree = "<group>"; };
-		812DAFE9276A5F0C00A1F1A7 /* placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = placeholder.swift; sourceTree = "<group>"; };
+		812DAFEB276A61B900A1F1A7 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		812DAFEE276A678400A1F1A7 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		812DAFEF276A679C00A1F1A7 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		812DAFF0276A67C300A1F1A7 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		812DAFF5276A72A700A1F1A7 /* HeaderViewConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewConstraints.swift; sourceTree = "<group>"; };
+		812DAFF8276A741300A1F1A7 /* FeedConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedConstraints.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +84,7 @@
 		812DAFC3276A316A00A1F1A7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				812DAFED276A674200A1F1A7 /* CustomFonts */,
 				812DAFAF276A30C400A1F1A7 /* AppDelegate.swift */,
 				812DAFB1276A30C400A1F1A7 /* SceneDelegate.swift */,
 				812DAFB8276A30C600A1F1A7 /* Assets.xcassets */,
@@ -165,7 +176,8 @@
 		812DAFCD276A326600A1F1A7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				812DAFE9276A5F0C00A1F1A7 /* placeholder.swift */,
+				812DAFF4276A727C00A1F1A7 /* Constraints */,
+				812DAFEB276A61B900A1F1A7 /* HeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -173,6 +185,7 @@
 		812DAFCE276A326E00A1F1A7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				812DAFF7276A739800A1F1A7 /* Constraints */,
 				812DAFE1276A537000A1F1A7 /* FeedViewController.swift */,
 			);
 			path = ViewControllers;
@@ -200,6 +213,32 @@
 				812DAFE5276A5C2D00A1F1A7 /* Components */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		812DAFED276A674200A1F1A7 /* CustomFonts */ = {
+			isa = PBXGroup;
+			children = (
+				812DAFF0276A67C300A1F1A7 /* Roboto-Light.ttf */,
+				812DAFEF276A679C00A1F1A7 /* Roboto-Regular.ttf */,
+				812DAFEE276A678400A1F1A7 /* Roboto-Bold.ttf */,
+			);
+			path = CustomFonts;
+			sourceTree = "<group>";
+		};
+		812DAFF4276A727C00A1F1A7 /* Constraints */ = {
+			isa = PBXGroup;
+			children = (
+				812DAFF5276A72A700A1F1A7 /* HeaderViewConstraints.swift */,
+			);
+			path = Constraints;
+			sourceTree = "<group>";
+		};
+		812DAFF7276A739800A1F1A7 /* Constraints */ = {
+			isa = PBXGroup;
+			children = (
+				812DAFF8276A741300A1F1A7 /* FeedConstraints.swift */,
+			);
+			path = Constraints;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +299,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				812DAFF3276A681C00A1F1A7 /* Roboto-Bold.ttf in Resources */,
+				812DAFF2276A681800A1F1A7 /* Roboto-Regular.ttf in Resources */,
+				812DAFF1276A681300A1F1A7 /* Roboto-Light.ttf in Resources */,
 				812DAFBC276A30C600A1F1A7 /* LaunchScreen.storyboard in Resources */,
 				812DAFB9276A30C600A1F1A7 /* Assets.xcassets in Resources */,
 			);
@@ -273,7 +315,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				812DAFB0276A30C400A1F1A7 /* AppDelegate.swift in Sources */,
-				812DAFEA276A5F0C00A1F1A7 /* placeholder.swift in Sources */,
+				812DAFF9276A741300A1F1A7 /* FeedConstraints.swift in Sources */,
+				812DAFEC276A61B900A1F1A7 /* HeaderView.swift in Sources */,
+				812DAFF6276A72A700A1F1A7 /* HeaderViewConstraints.swift in Sources */,
 				812DAFE2276A537000A1F1A7 /* FeedViewController.swift in Sources */,
 				812DAFE7276A5C3F00A1F1A7 /* InitialView.swift in Sources */,
 				812DAFB2276A30C400A1F1A7 /* SceneDelegate.swift in Sources */,
