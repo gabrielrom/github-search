@@ -3,8 +3,7 @@ import UIKit
 
 class HeaderView: UIView {
   lazy var icon: UIImageView! = {
-    var imageView = UIImageView()
-    imageView.image = UIImage(named: "Github-Icon")
+    var imageView = UIImageView(image: UIImage(named: "Github-Icon"))
     return imageView
   }()
   

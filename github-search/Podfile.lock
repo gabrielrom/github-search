@@ -1,0 +1,20 @@
+PODS:
+  - Alamofire (4.9.1)
+  - VegaScrollFlowLayout (1.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - VegaScrollFlowLayout
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - VegaScrollFlowLayout
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  VegaScrollFlowLayout: 9158061f29179147755f937c2b21693fc5dbbac3
+
+PODFILE CHECKSUM: 94d76cdd284eb45332db2109bc8f725b38cd00af
+
+COCOAPODS: 1.11.2
