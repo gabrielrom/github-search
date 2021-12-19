@@ -16,4 +16,13 @@ extension FeedViewController {
       reposCollectionView.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor)
     ])
   }
+  
+  func addLoadingAnimationViewConstraints() {
+    NSLayoutConstraint.activate([
+      loadingAnimationView.heightAnchor.constraint(equalToConstant: 87),
+      loadingAnimationView.widthAnchor.constraint(equalToConstant: 87),
+      loadingAnimationView.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: -15),
+      loadingAnimationView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+    ])
+  }
 }

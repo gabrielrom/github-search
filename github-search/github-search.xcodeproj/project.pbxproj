@@ -19,7 +19,14 @@
 		812DAFF3276A681C00A1F1A7 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 812DAFEE276A678400A1F1A7 /* Roboto-Bold.ttf */; };
 		812DAFF6276A72A700A1F1A7 /* HeaderViewConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812DAFF5276A72A700A1F1A7 /* HeaderViewConstraints.swift */; };
 		812DAFF9276A741300A1F1A7 /* FeedConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812DAFF8276A741300A1F1A7 /* FeedConstraints.swift */; };
+		813BB97E276EE80400F34B59 /* LoadingAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813BB97D276EE80400F34B59 /* LoadingAnimationView.swift */; };
+		813BB986276EEFD000F34B59 /* github-loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 813BB985276EEFD000F34B59 /* github-loading.json */; };
 		81849C66276B8E9C0015CAF1 /* CustomCellConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81849C65276B8E9C0015CAF1 /* CustomCellConstraints.swift */; };
+		81AD8157276CCD08001645E3 /* AlamofireService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AD8156276CCD08001645E3 /* AlamofireService.swift */; };
+		81AD815C276CCD81001645E3 /* IApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AD815B276CCD81001645E3 /* IApiService.swift */; };
+		81AD815E276CCE8A001645E3 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AD815D276CCE8A001645E3 /* Repository.swift */; };
+		81AD8161276CD247001645E3 /* Repositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AD8160276CD247001645E3 /* Repositories.swift */; };
+		81AD8163276CF795001645E3 /* RepositoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AD8162276CF795001645E3 /* RepositoriesViewModel.swift */; };
 		81C7D92F276ABF04001DA0D0 /* CustomCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C7D92E276ABF04001DA0D0 /* CustomCollectionView.swift */; };
 		81C7D931276ACD5D001DA0D0 /* CustomCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C7D930276ACD5D001DA0D0 /* CustomCellView.swift */; };
 		DD48BDBBD4506F353BFBE43B /* Pods_github_search.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17486AF9784E3A9E5D733670 /* Pods_github_search.framework */; };
@@ -37,8 +44,6 @@
 		812DAFD2276A32B400A1F1A7 /* placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = placeholder.swift; sourceTree = "<group>"; };
 		812DAFD5276A32C800A1F1A7 /* placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = placeholder.swift; sourceTree = "<group>"; };
 		812DAFD7276A32D200A1F1A7 /* placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = placeholder.swift; sourceTree = "<group>"; };
-		812DAFD9276A32E000A1F1A7 /* placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = placeholder.swift; sourceTree = "<group>"; };
-		812DAFDF276A32FE00A1F1A7 /* placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = placeholder.swift; sourceTree = "<group>"; };
 		812DAFE1276A537000A1F1A7 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		812DAFE6276A5C3F00A1F1A7 /* InitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialView.swift; sourceTree = "<group>"; };
 		812DAFEB276A61B900A1F1A7 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
@@ -47,7 +52,14 @@
 		812DAFF0276A67C300A1F1A7 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		812DAFF5276A72A700A1F1A7 /* HeaderViewConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewConstraints.swift; sourceTree = "<group>"; };
 		812DAFF8276A741300A1F1A7 /* FeedConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedConstraints.swift; sourceTree = "<group>"; };
+		813BB97D276EE80400F34B59 /* LoadingAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAnimationView.swift; sourceTree = "<group>"; };
+		813BB985276EEFD000F34B59 /* github-loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "github-loading.json"; sourceTree = "<group>"; };
 		81849C65276B8E9C0015CAF1 /* CustomCellConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellConstraints.swift; sourceTree = "<group>"; };
+		81AD8156276CCD08001645E3 /* AlamofireService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireService.swift; sourceTree = "<group>"; };
+		81AD815B276CCD81001645E3 /* IApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IApiService.swift; sourceTree = "<group>"; };
+		81AD815D276CCE8A001645E3 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		81AD8160276CD247001645E3 /* Repositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repositories.swift; sourceTree = "<group>"; };
+		81AD8162276CF795001645E3 /* RepositoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewModel.swift; sourceTree = "<group>"; };
 		81C7D92E276ABF04001DA0D0 /* CustomCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionView.swift; sourceTree = "<group>"; };
 		81C7D930276ACD5D001DA0D0 /* CustomCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellView.swift; sourceTree = "<group>"; };
 		CD92A46DBB218A6CD6C7AC74 /* Pods-github-search.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-github-search.release.xcconfig"; path = "Target Support Files/Pods-github-search/Pods-github-search.release.xcconfig"; sourceTree = "<group>"; };
@@ -97,6 +109,7 @@
 		812DAFC3276A316A00A1F1A7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				813BB985276EEFD000F34B59 /* github-loading.json */,
 				812DAFED276A674200A1F1A7 /* CustomFonts */,
 				812DAFAF276A30C400A1F1A7 /* AppDelegate.swift */,
 				812DAFB1276A30C400A1F1A7 /* SceneDelegate.swift */,
@@ -181,7 +194,7 @@
 		812DAFCC276A325E00A1F1A7 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				812DAFDF276A32FE00A1F1A7 /* placeholder.swift */,
+				81AD8162276CF795001645E3 /* RepositoriesViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -209,7 +222,8 @@
 		812DAFCF276A327800A1F1A7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				812DAFD9276A32E000A1F1A7 /* placeholder.swift */,
+				81AD815D276CCE8A001645E3 /* Repository.swift */,
+				81AD8160276CD247001645E3 /* Repositories.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -218,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				812DAFE6276A5C3F00A1F1A7 /* InitialView.swift */,
+				813BB97D276EE80400F34B59 /* LoadingAnimationView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -225,6 +240,7 @@
 		812DAFE8276A5D7D00A1F1A7 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				81AD8153276CCA26001645E3 /* WebServices */,
 				812DAFE5276A5C2D00A1F1A7 /* Components */,
 			);
 			path = Shared;
@@ -257,13 +273,37 @@
 			path = Constraints;
 			sourceTree = "<group>";
 		};
+		81AD8153276CCA26001645E3 /* WebServices */ = {
+			isa = PBXGroup;
+			children = (
+				81AD815F276CD05A001645E3 /* ApiServices */,
+				81AD8158276CCD3A001645E3 /* Protocols */,
+			);
+			path = WebServices;
+			sourceTree = "<group>";
+		};
+		81AD8158276CCD3A001645E3 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				81AD815B276CCD81001645E3 /* IApiService.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		81AD815F276CD05A001645E3 /* ApiServices */ = {
+			isa = PBXGroup;
+			children = (
+				81AD8156276CCD08001645E3 /* AlamofireService.swift */,
+			);
+			path = ApiServices;
+			sourceTree = "<group>";
+		};
 		B0DF6ADA0FAE85EE958421B4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				F97D6D4507235F3C6D2C76F3 /* Pods-github-search.debug.xcconfig */,
 				CD92A46DBB218A6CD6C7AC74 /* Pods-github-search.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -336,6 +376,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				812DAFF3276A681C00A1F1A7 /* Roboto-Bold.ttf in Resources */,
+				813BB986276EEFD000F34B59 /* github-loading.json in Resources */,
 				812DAFF2276A681800A1F1A7 /* Roboto-Regular.ttf in Resources */,
 				812DAFF1276A681300A1F1A7 /* Roboto-Light.ttf in Resources */,
 				812DAFBC276A30C600A1F1A7 /* LaunchScreen.storyboard in Resources */,
@@ -394,13 +435,19 @@
 			files = (
 				812DAFB0276A30C400A1F1A7 /* AppDelegate.swift in Sources */,
 				812DAFF9276A741300A1F1A7 /* FeedConstraints.swift in Sources */,
+				81AD815E276CCE8A001645E3 /* Repository.swift in Sources */,
 				812DAFEC276A61B900A1F1A7 /* HeaderView.swift in Sources */,
+				81AD8163276CF795001645E3 /* RepositoriesViewModel.swift in Sources */,
 				812DAFF6276A72A700A1F1A7 /* HeaderViewConstraints.swift in Sources */,
+				81AD8161276CD247001645E3 /* Repositories.swift in Sources */,
+				81AD8157276CCD08001645E3 /* AlamofireService.swift in Sources */,
 				81C7D931276ACD5D001DA0D0 /* CustomCellView.swift in Sources */,
 				812DAFE2276A537000A1F1A7 /* FeedViewController.swift in Sources */,
 				812DAFE7276A5C3F00A1F1A7 /* InitialView.swift in Sources */,
 				812DAFB2276A30C400A1F1A7 /* SceneDelegate.swift in Sources */,
+				81AD815C276CCD81001645E3 /* IApiService.swift in Sources */,
 				81C7D92F276ABF04001DA0D0 /* CustomCollectionView.swift in Sources */,
+				813BB97E276EE80400F34B59 /* LoadingAnimationView.swift in Sources */,
 				81849C66276B8E9C0015CAF1 /* CustomCellConstraints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,13 +7,16 @@ extension CustomCellView {
     NSLayoutConstraint.activate([
       imageOwner.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 20),
       imageOwner.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 20),
+      imageOwner.heightAnchor.constraint(equalToConstant: 41),
+      imageOwner.widthAnchor.constraint(equalToConstant: 41)
     ])
   }
   
   func setRepoNameConstraints() {
     NSLayoutConstraint.activate([
       repoName.centerYAnchor.constraint(equalTo: imageOwner.centerYAnchor),
-      repoName.leadingAnchor.constraint(equalTo: imageOwner.trailingAnchor, constant: 14)
+      repoName.leadingAnchor.constraint(equalTo: imageOwner.trailingAnchor, constant: 14),
+      repoName.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -20)
     ])
   }
 

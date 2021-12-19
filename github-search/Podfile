@@ -1,9 +1,12 @@
-platform :ios, '9.0'
-
+platform :ios, '12.0'
 
 target 'github-search' do
   use_frameworks!
   
   pod 'VegaScrollFlowLayout'
-  pod 'Alamofire'
+  pod 'Alamofire', '~> 5.5'
+  pod 'RxSwift', '6.2.0'
+  pod 'RxCocoa', '6.2.0'
+  pod 'Kingfisher', '~> 7.0'
+  pod 'lottie-ios'
 end
