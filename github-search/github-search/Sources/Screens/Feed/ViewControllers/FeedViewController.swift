@@ -17,6 +17,10 @@ class FeedViewController: UIViewController {
       collectionViewLayout: flowLayout
     )
     
+    collectionView.register(
+      CustomCellView.self,
+      forCellWithReuseIdentifier: "RepoCell")
+    
     collectionView.delegate = self
     
     return collectionView
@@ -37,9 +41,20 @@ class FeedViewController: UIViewController {
     view.addSubview(reposCollectionView)
     view.addSubview(loadingAnimationView)
     
-    addHeaderViewConstraints()
-    addRepoCollectionViewConstraints()
-    addLoadingAnimationViewConstraints()
+    HeaderViewSharedConstraints.centerHeaderOfView(
+      headerView: headerView,
+      superView: view
+    )
+    
+    CollectionViewSharedConstraints.addCollectionViewConstraints(
+      collectionView: reposCollectionView,
+      viewTop: headerView,
+      superView: view
+    )
+    
+    LoadingAnimationSharedConstraints.addLoadingAnimationViewConstraints(
+      loadingView: loadingAnimationView,
+      superView: view)
   }
   
   override func viewDidLoad() {
@@ -70,6 +85,10 @@ class FeedViewController: UIViewController {
       cell.countNumbersOfForks.text = String(model.forks_count)
       cell.countsNumbersOfWatchers.text = String(model.watchers_count)
     }.disposed(by: disposeBag)
+    
+    reposCollectionView.rx.modelSelected(Repository.self).bind { cell in
+      print(cell.full_name)
+    }
     
     repositoriesViewModel.fetchItems()
   }
