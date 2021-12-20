@@ -2,29 +2,11 @@ import Foundation
 import UIKit
 
 extension CustomCellView {
-  
-  func setImageOwnerConstraints() {
-    NSLayoutConstraint.activate([
-      imageOwner.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-      imageOwner.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 20),
-      imageOwner.heightAnchor.constraint(equalToConstant: 41),
-      imageOwner.widthAnchor.constraint(equalToConstant: 41)
-    ])
-  }
-  
   func setRepoNameConstraints() {
     NSLayoutConstraint.activate([
       repoName.centerYAnchor.constraint(equalTo: imageOwner.centerYAnchor),
       repoName.leadingAnchor.constraint(equalTo: imageOwner.trailingAnchor, constant: 14),
       repoName.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -20)
-    ])
-  }
-
-  func setDescriptionRepoConstraints() {
-    NSLayoutConstraint.activate([
-      descriptionRepo.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 22),
-      descriptionRepo.topAnchor.constraint(equalTo: spacingView.bottomAnchor, constant: 10),
-      descriptionRepo.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -20)
     ])
   }
 
@@ -67,15 +49,6 @@ extension CustomCellView {
     NSLayoutConstraint.activate([
       countsNumbersOfWatchers.leadingAnchor.constraint(equalTo: iconWatchers.trailingAnchor, constant: 6),
       countsNumbersOfWatchers.centerYAnchor.constraint(equalTo: iconWatchers.centerYAnchor)
-    ])
-  }
-  
-  func setSpacingViewConstraints() {
-    NSLayoutConstraint.activate([
-      spacingView.topAnchor.constraint(equalTo: imageOwner.bottomAnchor, constant: 20),
-      spacingView.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-      spacingView.heightAnchor.constraint(equalToConstant: 1),
-      spacingView.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -20)
     ])
   }
 }

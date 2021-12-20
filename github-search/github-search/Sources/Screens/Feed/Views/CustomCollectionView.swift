@@ -3,7 +3,6 @@ import UIKit
 
 class CustomCollectionView: UICollectionView {
   var cellIdentifier: String? = "RepoCell"
-  var countRow: Int?
   
   override init(
     frame: CGRect,
@@ -21,7 +20,5 @@ class CustomCollectionView: UICollectionView {
   private func loadView() {
     self.translatesAutoresizingMaskIntoConstraints = false
     self.backgroundColor = .none
-    
-    self.register(CustomCellView.self, forCellWithReuseIdentifier: cellIdentifier!)
   }
 }

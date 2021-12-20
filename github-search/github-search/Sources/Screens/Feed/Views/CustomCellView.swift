@@ -29,16 +29,17 @@ class CustomCellView: UICollectionViewCell {
     self.backgroundColor = UIColor(named: "Background-Card")
     self.layer.cornerRadius = 5
     
-    setStylesImageOwner()
+    CustomCellSharedStyles.setStylesImageOwner(imageOwner: imageOwner)
+    CustomCellSharedStyles.setStylesDescriptionRepo(description: descriptionRepo)
+    CustomCellSharedStyles.setStylesSpacingView(spacingView: spacingView)
+    
     setStylesRepoName()
-    setStylesDescriptionRepo()
     setStylesIconStars()
     setStylesNumberOfStars()
     setStylesIconForks()
     setStylesNumberOfForks()
     setStylesIconWatchers()
     setStylesNumberOfWatchers()
-    setStylesSpacingView()
     
     addSubview(imageOwner)
     addSubview(repoName)
@@ -51,38 +52,32 @@ class CustomCellView: UICollectionViewCell {
     addSubview(countsNumbersOfWatchers)
     addSubview(spacingView)
     
-    setImageOwnerConstraints()
+    CustomCellSharedConstraints.setImageOwnerConstraints(
+      imageView: imageOwner,
+      superView: self)
+    
+    CustomCellSharedConstraints.setDescriptionConstraints(
+      descriptionView: descriptionRepo,
+      spacingView: spacingView,
+      superView: self)
+    
+    CustomCellSharedConstraints.setSpacingViewConstraints(
+      spacingView: spacingView,
+      imageView: imageOwner,
+      superView: self)
+    
     setRepoNameConstraints()
-    setDescriptionRepoConstraints()
     setIconStarsConstraints()
     setCountNumbersOfStarsConstraints()
     setIconForksConstraints()
     setCountNumbersOfForksConstraints()
     setIconWatchersConstraints()
     setCountNumbersOfWatchersConstraints()
-    setSpacingViewConstraints()
   }
   
 }
 
 extension CustomCellView {
-  
-  private func setStylesImageOwner() {
-    imageOwner.translatesAutoresizingMaskIntoConstraints = false
-    
-    imageOwner.frame = CGRect(
-      x: 0,
-      y: 0,
-      width: 41,
-      height: 41
-    )
-    
-    imageOwner.contentMode = .scaleToFill
-    imageOwner.image = UIImage(named: "Default-Image")
-    imageOwner.layer.masksToBounds = false
-    imageOwner.layer.cornerRadius = imageOwner.frame.height / 2
-    imageOwner.clipsToBounds = true
-  }
   
   private func setStylesRepoName() {
     repoName.translatesAutoresizingMaskIntoConstraints = false
@@ -93,18 +88,6 @@ extension CustomCellView {
       attributes: [
         .font: UIFont(name: "Roboto-Bold", size: 14)!,
         .foregroundColor: UIColor(named: "Primary-Text-Color")!
-    ])
-  }
-  
-  private func setStylesDescriptionRepo() {
-    descriptionRepo.translatesAutoresizingMaskIntoConstraints = false
-    
-    descriptionRepo.numberOfLines = 3
-    descriptionRepo.attributedText = NSAttributedString(
-      string: "Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um",
-      attributes: [
-        .font: UIFont(name: "Roboto-Bold", size: 12)!,
-        .foregroundColor: UIColor(named: "Secondary-Text-Color")!
     ])
   }
   
@@ -167,14 +150,6 @@ extension CustomCellView {
         .font: UIFont(name: "Roboto-Bold", size: 12)!,
         .foregroundColor: UIColor(named: "Secondary-Text-Color")!
     ])
-  }
-  
-  private func setStylesSpacingView() {
-    spacingView.translatesAutoresizingMaskIntoConstraints = false
-    
-    spacingView.backgroundColor = UIColor(
-      named: "Spacing-Color"
-    )
   }
   
 }

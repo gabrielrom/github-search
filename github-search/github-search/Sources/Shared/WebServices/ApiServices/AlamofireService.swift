@@ -21,4 +21,23 @@ class AlamofireService: IApiService {
       onCompleted(repos.items)
     }
   }
+  
+  func listPullRequests(ownerRepo: String, repoName: String, page: Int, perPage: Int, onCompleted: @escaping ([PullRequests]) -> Void) -> Void {
+    let parameters: [String: String] = [
+      "q": "=",
+      "page": "\(page)",
+      "per_page": "\(perPage)",
+      "state": "all"
+    ]
+    
+    AF.request(
+      "https://api.github.com/repos/\(ownerRepo)/\(repoName)/pulls",
+      method: .get,
+      parameters: parameters,
+      encoder: .urlEncodedForm).responseDecodable(of: [PullRequests].self) { data in
+        guard let pullRequests = data.value else { return }
+        onCompleted(pullRequests)
+      }
+    
+  }
 }

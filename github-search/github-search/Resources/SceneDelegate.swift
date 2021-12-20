@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     window = UIWindow(windowScene: windowScene)
     
-    window?.rootViewController = FeedViewController()
+    window?.rootViewController = PullRequestsViewController()
     window?.makeKeyAndVisible()
   }
 
