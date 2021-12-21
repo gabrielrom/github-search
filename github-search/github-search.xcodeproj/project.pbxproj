@@ -37,6 +37,7 @@
 		8185375A2770C49C00BCB16C /* StateLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818537592770C49C00BCB16C /* StateLabel.swift */; };
 		8185375D2770D1C800BCB16C /* StatePullRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8185375C2770D1C800BCB16C /* StatePullRequest.swift */; };
 		8185375F2771025100BCB16C /* LoadingAnimationSharedConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8185375E2771025100BCB16C /* LoadingAnimationSharedConstraints.swift */; };
+		8185376527712A4600BCB16C /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8185376427712A4600BCB16C /* AppCoordinator.swift */; };
 		819AA320276FFC7600C99AFE /* PullRequestsConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819AA31F276FFC7600C99AFE /* PullRequestsConstraints.swift */; };
 		819AA3222770013300C99AFE /* CollectionViewSharedConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819AA3212770013300C99AFE /* CollectionViewSharedConstraints.swift */; };
 		819AA3242770061300C99AFE /* PRsCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819AA3232770061300C99AFE /* PRsCustomCell.swift */; };
@@ -70,6 +71,7 @@
 		818537592770C49C00BCB16C /* StateLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateLabel.swift; sourceTree = "<group>"; };
 		8185375C2770D1C800BCB16C /* StatePullRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatePullRequest.swift; sourceTree = "<group>"; };
 		8185375E2771025100BCB16C /* LoadingAnimationSharedConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAnimationSharedConstraints.swift; sourceTree = "<group>"; };
+		8185376427712A4600BCB16C /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		819AA31F276FFC7600C99AFE /* PullRequestsConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestsConstraints.swift; sourceTree = "<group>"; };
 		819AA3212770013300C99AFE /* CollectionViewSharedConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewSharedConstraints.swift; sourceTree = "<group>"; };
 		819AA3232770061300C99AFE /* PRsCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PRsCustomCell.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 		812DAFC4276A31AE00A1F1A7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				8185376327712A3400BCB16C /* Coordinators */,
 				812DAFE8276A5D7D00A1F1A7 /* Shared */,
 				812DAFC5276A31D700A1F1A7 /* Screens */,
 			);
@@ -326,6 +329,14 @@
 				8185375C2770D1C800BCB16C /* StatePullRequest.swift */,
 			);
 			path = Enums;
+			sourceTree = "<group>";
+		};
+		8185376327712A3400BCB16C /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				8185376427712A4600BCB16C /* AppCoordinator.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 		819AA32727701C6B00C99AFE /* Styles */ = {
@@ -511,6 +522,7 @@
 				81808BA3276FD214007A9CE2 /* CustomCellConstraints.swift in Sources */,
 				819AA3262770084400C99AFE /* CustomCellSharedConstraints.swift in Sources */,
 				81808B95276FD1A0007A9CE2 /* AlamofireService.swift in Sources */,
+				8185376527712A4600BCB16C /* AppCoordinator.swift in Sources */,
 				8185375A2770C49C00BCB16C /* StateLabel.swift in Sources */,
 				81808B96276FD1A0007A9CE2 /* IApiService.swift in Sources */,
 				819AA320276FFC7600C99AFE /* PullRequestsConstraints.swift in Sources */,
