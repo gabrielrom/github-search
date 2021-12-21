@@ -6,8 +6,8 @@ import RxCocoa
 import Kingfisher
 
 class PullRequestsViewController: UIViewController {
-  var ownerRepo: String?
-  var repoName: String?
+  var ownerRepo: String = ""
+  var repoName: String = ""
   
   lazy var headerView: HeaderView = {
     var header = HeaderView()
@@ -73,6 +73,13 @@ class PullRequestsViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    goBackView.addTarget(
+      self,
+      action: #selector(goToHome),
+      for: .touchUpInside
+    )
+    
     bindCollectionData()
     bindLoadingAnimation()
   }
@@ -122,8 +129,8 @@ class PullRequestsViewController: UIViewController {
     }
     
     pullRequestsViewModel.fetchItems(
-      ownerRepo: "vsouza",
-      repoName: "awesome-ios"
+      ownerRepo: ownerRepo,
+      repoName: repoName
     )
   }
   
@@ -133,6 +140,12 @@ class PullRequestsViewController: UIViewController {
         self.loadingAnimationView.removeFromSuperview()
       }
     })
+  }
+}
+
+extension PullRequestsViewController {
+  @objc func goToHome() {
+    self.navigationController?.popToRootViewController(animated: true)
   }
 }
 
@@ -153,10 +166,12 @@ extension PullRequestsViewController: UICollectionViewDelegate, UICollectionView
       paginationCount += 1
       
       pullRequestsViewModel.getMorePullRequests(
-        ownerRepo: ownerRepo ?? "vsouza",
-        repoName: repoName ?? "awesome-ios",
+        ownerRepo: ownerRepo,
+        repoName: repoName,
         page: paginationCount)
     }
   }
   
 }
+
+

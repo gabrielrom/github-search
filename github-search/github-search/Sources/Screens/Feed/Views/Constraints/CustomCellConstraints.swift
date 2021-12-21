@@ -26,7 +26,7 @@ extension CustomCellView {
 
   func setIconForksConstraints() {
     NSLayoutConstraint.activate([
-      iconForks.leadingAnchor.constraint(equalTo: countNumbersOfStars.trailingAnchor, constant: 36),
+      iconForks.leadingAnchor.constraint(equalTo: countNumbersOfStars.trailingAnchor, constant: 30),
       iconForks.centerYAnchor.constraint(equalTo: iconStars.centerYAnchor, constant: 1)
     ])
   }
@@ -40,7 +40,7 @@ extension CustomCellView {
 
   func setIconWatchersConstraints() {
     NSLayoutConstraint.activate([
-      iconWatchers.leadingAnchor.constraint(equalTo: countNumbersOfForks.trailingAnchor, constant: 36),
+      iconWatchers.leadingAnchor.constraint(equalTo: countNumbersOfForks.trailingAnchor, constant: 30),
       iconWatchers.centerYAnchor.constraint(equalTo: iconStars.centerYAnchor, constant: 2)
     ])
   }

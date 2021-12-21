@@ -31,6 +31,7 @@ class FeedViewController: UIViewController {
   var repositoriesViewModel = RepositoriesViewModel(
     repositoriesService: AlamofireService()
   )
+  
   var disposeBag = DisposeBag()
   var paginationCount = 1
   
@@ -87,7 +88,14 @@ class FeedViewController: UIViewController {
     }.disposed(by: disposeBag)
     
     reposCollectionView.rx.modelSelected(Repository.self).bind { cell in
-      print(cell.full_name)
+      var pullRequestPage = PullRequestsViewController()
+      let repoCredentials = cell.full_name.split(separator: "/")
+      
+      pullRequestPage.ownerRepo = String(repoCredentials[0])
+      pullRequestPage.repoName = String(repoCredentials[1])
+      
+      self.navigationController?.setNavigationBarHidden(true, animated: false)
+      self.navigationController?.pushViewController(pullRequestPage, animated: true)
     }
     
     repositoriesViewModel.fetchItems()

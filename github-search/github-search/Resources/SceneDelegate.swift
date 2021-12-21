@@ -16,8 +16,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     window = UIWindow(windowScene: windowScene)
     
-    window?.rootViewController = PullRequestsViewController()
-    window?.makeKeyAndVisible()
+    let AppCoordinator = AppCoordinator(window: window)
+    AppCoordinator.start()
   }
 
   func sceneDidDisconnect(_ scene: UIScene) { }

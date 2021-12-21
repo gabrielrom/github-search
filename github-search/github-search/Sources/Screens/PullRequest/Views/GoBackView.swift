@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-class GoBackView: UIControl {
+class GoBackView: UIButton {
   lazy var iconArrow: UIImageView = {
     return UIImageView(image: UIImage(named: "Icon-arrow"))
   }()
