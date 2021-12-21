@@ -1,64 +1,77 @@
-# Desafio iOS
 
-## Criar um aplicativo para consultar a API do GitHub ##
-Criar um aplicativo para consultar a API do GitHub e trazer os repositórios mais populares de Swift.
+<h1 align="center">Github Search 🔥</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-1.0-blue.svg?cacheSeconds=2592000" />
+</p>
 
-## O que será avaliado:
-- Qualidade do código.
-- Adoção de boas práticas recomendadas pela Apple no uso das APIs e Human Interface Guidelines.
-- Funcionamento do produto entregue.
+<p align="center">
+<img src="./Capa - Black.png"/>
+</p>
 
-### Requisitos
-- Lista de repositórios. Exemplo de chamada na API : https://api.github.com/search/repositories?q=language:Swift&sort=stars&page=1    
-- Paginação na tela de lista, com endless scroll / scroll infinito (incrementando o parâmetro page).    
-- Cada repositório deve exibir Nome do repositório, Descrição do Repositório, Nome / Foto do autor, Número de Stars, Número de Forks
-- Ao tocar em um item, deve levar a lista de Pull Requests do repositório
-- Pull Requests de um repositório. Exemplo de chamada na API: https://api.github.com/repos/<criador>/<repositório>/pulls
-- Cada item da lista deve exibir Nome / Foto do autor do PR, Título do PR, Data do PR e Body do PR
-- Ao tocar em um item, deve abrir no browser a página do Pull Request em questão
+## About
 
-### A solução DEVE conter
--    Versão mínima do iOS : 13.*
--    Arquivo .gitignore
--    Usar Viewcode
--    Gestão de dependências no projeto. Ex: Cocoapods
--    Framework para Comunicação com API. Ex: Alamofire
--    Mapeamento json -> Objeto . Ex: ObjectMapper
--    Cache de Imagens. Ex SDWebImage
--    Suporte devices a partir do iPhone 5s.
--    Desenvolvido em Swift 5+ e Xcode 13.1.
+> O Github Search é um app que lista os repositórios mais populares do Swift e seus respectivos PRs
 
-### **Ganha + pontos se conter** ###
--    Persistir os dados no CoreData
--    Exibir os dados do CoreData caso o app esteja offline
--    Testes unitários no projeto. Ex: XCTests
--    Componentes customizados;
--    Fonte customizadas;
--    l10n;
--    App Universal , Ipad | Iphone | Landscape | Portrait (Size Classes)
+## Getting Started
 
-### **Ganha ++ pontos se usar** ###
+```sh
+git clone https://github.com/gabrielrom/github-search.git 
 
--    SwiftUI com Combine.
+-- OR WITH GITHUB CLI --
 
-### Sugestões ###
-As sugestões de bibliotecas fornecidas são só um guideline, sintam-se a vontade para usar diferentes e nos surpreenderem. 
-O importante de fato é que os objetivos macros sejam atingidos.
+gh repo clone gabrielrom/github-search
+```
+> Agora precisamos instalar as dependências que o projeto necessita para ser executado, para isso vamos utilizar o CocoaPods.
 
-### Processo de submissão ###
-O candidato deverá implementar a solução e enviar um pull request para este repositório com a solução.
-O processo de Pull Request funciona da seguinte maneira:
-1. Candidato fará um fork desse repositório (não irá clonar direto!)
+```sh
+cd github-search/github-search 
 
-2. Fará seu projeto nesse fork.
+pod install 
 
-3. Commitará e subirá as alterações para o SEU fork.
+open -a Xcode github-search.xcworkspace
+```
+## OBS !!!
+<p align="left">
+<img src="./error-project.png"/>
+</p>
 
-4. Pela interface do GitHub, irá enviar um Pull Request.
+> Caso ao tentar rolar a scroll da lista de repositórios ocorrer um error como esse acima, precisamos remover o "!", isso acontece porque o VegaScroll, que é uma dependencia para fazer a animação da UICollectionView, está com algum bug. Logo após ter feito isso você poderá rodar executar o app novamente!
 
-Se possível deixar o fork público para facilitar a inspeção do código.
+## Tecnologias utilizadas
+- [x] Alamofire (Responsável pela comunicação com API do Github)
+- [x] CocoaPods (Responsável pela gestão de dependências no projeto)
+- [x] KingFisher (Responsável por baixar imagens da web e fazer seu cache)
+- [x] VegaScroll (Responsável por fazer animação da CollectionView)
+- [x] RxSwift (Responsável pela gestão dos dados)
+- [x] MVVM-C (Arquitetura utilizada)
+- [x] Lottie iOS (Responsável por implementar animacoes no ios)
 
-**ATENÇÃO**
-Não se deve tentar fazer o PUSH diretamente para ESTE repositório!
+## Requisitos cumpridos
+- [x] Versão mínima do iOS : 13.*
+- [x] Desenvolvido em Swift 5+ e Xcode 13.1.
+- [x] Usar Viewcode
+- [x] Gestão de dependências no projeto
+- [x] Cache de Imagens
+- [x] Mapeamento json -> Objeto
+- [x] Framework para Comunicação com API
+- [x] Componentes customizados
+- [x] Fonte customizadas
+- [x] Ao clicar em uma pull request, abrir o browser com a url da PR
+
+## Pontos de melhoras do App
+* Criar uma feature para filtrar os PRs pelo o nome do dono da PR
+* Implementar testes unitarios & UI Tests
+* Criar uma api key para o Github, com isso podemos aumentar o número de requisiçoes permitidas.
+
+## Author
+
+👤 **Gabriel Matheus**
+
+* Website: https://linktr.ee/gabrieIrom
+* Github: [@gabrielrom](https://github.com/gabrielrom)
+* Link do figma: [@figma](https://www.figma.com/file/X9PcANEaKLkjZMrlMSyiqz/Desafio---Git?node-id=0%3A1)
+* Link de inspiração da UI: [@dribble](https://dribbble.com/shots/11526475-Github-Mobile-Concept)
 
 
+***
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)
