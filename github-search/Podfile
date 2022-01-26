@@ -3,6 +3,15 @@ platform :ios, '12.0'
 target 'github-search' do
   use_frameworks!
   
+  target 'GithubSearchTests' do
+    pod 'VegaScrollFlowLayout'
+    pod 'Alamofire', '~> 5.5'
+    pod 'RxSwift', '6.2.0'
+    pod 'RxCocoa', '6.2.0'
+    pod 'Kingfisher', '~> 7.0'
+    pod 'lottie-ios'
+  end
+  
   pod 'VegaScrollFlowLayout'
   pod 'Alamofire', '~> 5.5'
   pod 'RxSwift', '6.2.0'

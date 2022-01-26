@@ -33,7 +33,9 @@ class PullRequestViewModel {
     }
   }
   
-  func formatStringPullRequestDate(date: String) -> String {
+  func formatStringPullRequestDate(date: String) -> String? {
+    if date.isEmpty || !date.contains("T") { return nil }
+    
     let dateArray = date.split(separator: "T")
     let dateOnlyMonthAndYears = dateArray[0].split(separator: "-")
     

@@ -85,6 +85,30 @@ class PullRequestsViewController: UIViewController {
   }
   
   func bindCollectionData() {
+    setPullRequestsCollectionBinder()
+    setPullRequestOnTapBinder()
+    
+    pullRequestsViewModel.fetchItems(
+      ownerRepo: ownerRepo,
+      repoName: repoName
+    )
+  }
+  
+  func bindLoadingAnimation() {
+    _ = pullRequestsViewModel.isDataLoaded.asObservable().bind(onNext: { value in
+      if value {
+        self.loadingAnimationView.removeFromSuperview()
+      }
+    })
+  }
+}
+
+extension PullRequestsViewController {
+  @objc func goToHome() {
+    self.navigationController?.popToRootViewController(animated: true)
+  }
+  
+  func setPullRequestsCollectionBinder() {
     pullRequestsViewModel.pullRequests.asObservable().bind(
       to: collectionView.rx.items(cellIdentifier: "PRsCell", cellType: PRsCustomCell.self)
     ) { row, model, cell in
@@ -100,7 +124,7 @@ class PullRequestsViewController: UIViewController {
       cell.ownerName.text = model.user.login
       cell.pullRequestName.text = model.title
       cell.descriptionPullRequest.text = model.body.isEmpty ? "No Body" : model.body
-      cell.pullRequestDate.text = self.pullRequestsViewModel.formatStringPullRequestDate(date: model.created_at)
+      cell.pullRequestDate.text = self.pullRequestsViewModel.formatStringPullRequestDate(date: model.created_at) ?? ""
       
       if model.state == "open" {
         cell.stateLabel.stateTitle.text = "OPEN"
@@ -121,31 +145,14 @@ class PullRequestsViewController: UIViewController {
       }
       
     }.disposed(by: disposeBag)
-    
+  }
+  
+  func setPullRequestOnTapBinder() {
     _ = collectionView.rx.modelSelected(PullRequests.self).bind { cell in
       if let link = URL(string: cell.html_url) {
         UIApplication.shared.open(link)
       }
     }
-    
-    pullRequestsViewModel.fetchItems(
-      ownerRepo: ownerRepo,
-      repoName: repoName
-    )
-  }
-  
-  func bindLoadingAnimation() {
-    _ = pullRequestsViewModel.isDataLoaded.asObservable().bind(onNext: { value in
-      if value {
-        self.loadingAnimationView.removeFromSuperview()
-      }
-    })
-  }
-}
-
-extension PullRequestsViewController {
-  @objc func goToHome() {
-    self.navigationController?.popToRootViewController(animated: true)
   }
 }
 

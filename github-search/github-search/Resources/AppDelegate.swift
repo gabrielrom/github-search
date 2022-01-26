@@ -1,4 +1,5 @@
 import UIKit
+import UserNotificationsUI
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -11,6 +12,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     let AppCoordinator = AppCoordinator(window: window)
     AppCoordinator.start()
+    
+    let center = UNUserNotificationCenter.current()
+    
+    // Pede Autorizacao ao usuario.
+    center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
+      if !granted {
+        print("O usuario nao aceitou!")
+      }
+    }
     
     return true
   }

@@ -63,6 +63,7 @@ class FeedViewController: UIViewController {
     
     bindLoadingAnimation()
     bindCollectionData()
+    setNotification()
   }
   
   func bindCollectionData() {
@@ -107,6 +108,36 @@ class FeedViewController: UIViewController {
         self.loadingAnimationView.removeFromSuperview()
       }
     })
+  }
+  
+  func setNotification() {
+    let content = UNMutableNotificationContent()
+  
+    content.title = NSString.localizedUserNotificationString(forKey: "Wake Up!", arguments: nil)
+    content.body = NSString.localizedUserNotificationString(forKey: "Rise and shine! It's morning time!", arguments: ["Hello again"])
+//    content.categoryIdentifier = "TIMER_EXPIRED"
+    
+    var dateInfo = DateComponents()
+    dateInfo.second = 1
+    
+    let trigger = UNCalendarNotificationTrigger(dateMatching: dateInfo, repeats: false)
+    
+    let request = UNNotificationRequest(
+      identifier: "Morning Alarm",
+      content: content,
+      trigger: trigger
+    )
+    
+    let center = UNUserNotificationCenter.current()
+    center.add(request) { (error: Error?) in
+      
+      if let theError = error {
+        print("Error in local notification: " + theError.localizedDescription)
+      }
+      
+    }
+    
+    
   }
 }
 
